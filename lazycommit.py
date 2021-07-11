@@ -23,6 +23,6 @@ if __name__ == "__main__":
     print("git add --all")
     commit_msg = get_commit_msg()
     repo.index.commit(commit_msg)
-    print(f"git commit -m {commit_msg}")
+    print(f"git commit -m \"{commit_msg}\"")
     info = repo.remotes.origin.push()
     print(info.summary)
