@@ -20,6 +20,9 @@ def get_commit_msg():
 if __name__ == "__main__":
     repo = Repo(".")
     repo.git.add(all=True)
+    print("git add --all")
     commit_msg = get_commit_msg()
     repo.index.commit(commit_msg)
+    print(f"git commit -m {commit_msg}")
     repo.remotes.origin.push()
+    print(f"git push")
