@@ -24,5 +24,5 @@ if __name__ == "__main__":
     commit_msg = get_commit_msg()
     repo.index.commit(commit_msg)
     print(f"git commit -m \"{commit_msg}\"")
-    info = repo.remotes.origin.push()
+    info = repo.remotes.origin.push()[0]
     print(info.summary)
